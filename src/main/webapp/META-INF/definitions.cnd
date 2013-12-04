@@ -1,0 +1,13 @@
+<m8bnt = 'http://www.magic8balljahia.org/jahia/nt/1.0'>
+<m8bmix = 'http://www.magic8balljahia.org/jahia/mix/1.0'>
+
+[m8bnt:answer] > jnt:content
+- label (string) mandatory
+- type (string, choicelist[resourceBundle]) mandatory < status1, status2, status3
+
+[m8bnt:answerList] > jnt:content, jmix:list
+orderable
++ * (m8bnt:answer) = m8bnt:answer
+
+[m8bnt:magic8ball] > jnt:content, jmix:structuredContent
++ answers (m8bnt:answerList)
